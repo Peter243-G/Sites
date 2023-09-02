@@ -88,9 +88,9 @@ body {
 }
 
 .entrada input:focus {
-    background-color: #adadad;
+    background-color: #adadad1e;
     padding-left: 12px;
-    color: #fff;
+    color: #b4b4b4;
     border-radius: 10px;
     font-size: 1.1rem;
 }
