@@ -1,0 +1,214 @@
+/* Resetando os padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Caixa mãe de todos os elementos da página */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to top left, #1c4792 50%, #5f0077 50%);
+    /* background-image: radial-gradient(circle, #1c4789, #5f0070); */
+}
+
+/* Caixa de Formulario que agrupa todos os elementos */
+.formulario {
+    width: 400px;
+    height: 600px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow:
+        6px 6px 8px rgba(0, 0, 0, 0.3),
+        -6px -6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Caixa que agrupa imagem e titulo */
+.formulario .titulo {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*  Caixa que agrupa imagem  */
+.titulo .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+/* Imagem do titulo */
+.image img {
+    width: 90%;
+    /* display: block; */
+    filter: invert(1);
+}
+
+/* Titulo do formulario */
+.titulo h1 {
+    margin-top: 25px;
+    font-size: 2.5rem;
+    font-family: "arvo", sans-serif;
+    color: #fff;
+}
+
+/* Caixa que agrupa os campos de entrada */
+.campos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+    width: 100%;
+}
+
+/* Entrada de dados -> input */
+.campos input {
+    width: 90%;
+    height: 50px;
+    padding-left: 12px;
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 0px 15px 15px 0px;
+    border: none;
+    outline: none;
+    color: #777;
+    transition: 0.45s;
+    box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/* quando eu clico e uso o campo de entrada de dados */
+.campos input:focus {
+    background-color: #adadad;
+    color: #fff;
+}
+
+/* Caixa que agrupa botões de ajuda */
+.buttons {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+/* Botões de conta e esqueceu senha */
+.buttons button {
+    /* width: 140px; */
+    width: max-content;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* Quando passo o mouse por cima dos botões de ajuda*/
+.buttons button:hover {
+    cursor: pointer;
+    /* border-bottom: 1px solid #fff; */
+}
+
+/*  Psudo-elemento para criar efeito de sublinhado */
+.buttons button::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    display: block;
+    background-color: #fff;
+    transition: all 0.4s;
+}
+
+/* Efeito é ativado quando passo o mouse por cima */
+.buttons button:hover::after {
+    width: 100%;
+}
+
+/* Botão de login */
+.login {
+    width: 90%;
+    height: 60px;
+    background: #5f0077;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+    letter-spacing: 2px;
+    transition: 0.4s ease;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito quando passo o mouse por cima do botão de login */
+.login:hover {
+    background-color: #48005a;
+    cursor: pointer;
+}
+
+/* Recursividade - Mobile*/
+
+@media screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        padding-top: 30px;
+        align-items: flex-start;
+    }
+
+    .formulario {
+        width: 90%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .formulario .titulo {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .titulo .image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .image img {
+        width: 85%;
+    }
+
+    .titulo h1 {
+        font-size: 2.4em;
+        font-weight: 400;
+    }
+}
